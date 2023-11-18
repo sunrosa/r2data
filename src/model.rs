@@ -1,17 +1,17 @@
 use crate::data::*;
 
 #[derive(Debug)]
-pub struct Item<'a> {
+pub struct Item {
     pub id: ItemId,
-    pub name: &'a str,
+    pub name: String,
     pub rarity: Rarity,
     pub category: Category,
 }
 
-impl PartialEq<Item<'_>> for Item<'_> {
+impl PartialEq<Item> for Item {
     fn eq(&self, other: &Item) -> bool {
         self.id == other.id
     }
 }
 
-impl Eq for Item<'_> {}
+impl Eq for Item {}
