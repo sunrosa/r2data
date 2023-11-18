@@ -88,9 +88,9 @@ pub enum HuntressSpecialId {
 
 #[derive(Debug)]
 pub struct BanditLoadout {
-    primary: BanditPrimaryId,
-    secondary: BanditSecondaryId,
-    special: BanditSpecialId,
+    pub primary: BanditPrimaryId,
+    pub secondary: BanditSecondaryId,
+    pub special: BanditSpecialId,
 }
 
 #[derive(Debug)]
@@ -113,9 +113,9 @@ pub enum BanditSpecialId {
 
 #[derive(Debug)]
 pub struct MulTLoadout {
-    primary1: MulTPrimaryId,
-    primary2: MulTPrimaryId,
-    special: MulTSpecialId,
+    pub primary1: MulTPrimaryId,
+    pub primary2: MulTPrimaryId,
+    pub special: MulTSpecialId,
 }
 
 #[derive(Debug)]
@@ -134,9 +134,9 @@ pub enum MulTSpecialId {
 
 #[derive(Debug)]
 pub struct EngineerLoadout {
-    secondary: EngineerSecondaryId,
-    utility: EngineerUtilityId,
-    special: EngineerSpecialId,
+    pub secondary: EngineerSecondaryId,
+    pub utility: EngineerUtilityId,
+    pub special: EngineerSpecialId,
 }
 
 #[derive(Debug)]
@@ -159,9 +159,9 @@ pub enum EngineerSpecialId {
 
 #[derive(Debug)]
 pub struct ArtificerLoadout {
-    primary: ArtificerPrimaryId,
-    secondary: ArtificerSecondaryId,
-    special: ArtificerSpecialId,
+    pub primary: ArtificerPrimaryId,
+    pub secondary: ArtificerSecondaryId,
+    pub special: ArtificerSpecialId,
 }
 
 #[derive(Debug)]
@@ -184,9 +184,9 @@ pub enum ArtificerSpecialId {
 
 #[derive(Debug)]
 pub struct MercenaryLoadout {
-    secondary: MercenarySecondaryId,
-    utility: MercenaryUtilityId,
-    special: MercenarySpecialId,
+    pub secondary: MercenarySecondaryId,
+    pub utility: MercenaryUtilityId,
+    pub special: MercenarySpecialId,
 }
 
 #[derive(Debug)]
@@ -209,9 +209,9 @@ pub enum MercenarySpecialId {
 
 #[derive(Debug)]
 pub struct RexLoadout {
-    secondary: RexSecondaryId,
-    utility: RexUtilityId,
-    special: RexSpecialId,
+    pub secondary: RexSecondaryId,
+    pub utility: RexUtilityId,
+    pub special: RexSpecialId,
 }
 
 #[derive(Debug)]
@@ -234,9 +234,9 @@ pub enum RexSpecialId {
 
 #[derive(Debug)]
 pub struct LoaderLoadout {
-    secondary: LoaderSecondaryId,
-    utility: LoaderUtilityId,
-    special: LoaderSpecialId,
+    pub secondary: LoaderSecondaryId,
+    pub utility: LoaderUtilityId,
+    pub special: LoaderSpecialId,
 }
 
 #[derive(Debug)]
@@ -259,9 +259,9 @@ pub enum LoaderSpecialId {
 
 #[derive(Debug)]
 pub struct AcridLoadout {
-    misc: AcridMiscId,
-    secondary: AcridSecondaryId,
-    utility: AcridUtilityId,
+    pub misc: AcridMiscId,
+    pub secondary: AcridSecondaryId,
+    pub utility: AcridUtilityId,
 }
 
 #[derive(Debug)]
@@ -284,9 +284,9 @@ pub enum AcridUtilityId {
 
 #[derive(Debug)]
 pub struct CaptainLoadout {
-    utility: CaptainUtilityId,
-    special1: CaptainSpecialId,
-    special2: CaptainSpecialId,
+    pub utility: CaptainUtilityId,
+    pub special1: CaptainSpecialId,
+    pub special2: CaptainSpecialId,
 }
 
 #[derive(Debug)]
@@ -305,9 +305,9 @@ pub enum CaptainSpecialId {
 
 #[derive(Debug)]
 pub struct RailgunnerLoadout {
-    secondary: RailgunnerSecondaryId,
-    utility: RailgunnerUtilityId,
-    special: RailgunnerSpecialId,
+    pub secondary: RailgunnerSecondaryId,
+    pub utility: RailgunnerUtilityId,
+    pub special: RailgunnerSpecialId,
 }
 
 #[derive(Debug)]
