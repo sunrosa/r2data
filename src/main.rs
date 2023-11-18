@@ -5,7 +5,7 @@ use data::*;
 use model::*;
 
 fn main() {
-    let syringe = data::SoldiersSyringe;
-    let data::Item::SoldiersSyringe(item) = syringe;
-    println!("{:?}", item.name);
+    let syringe1 = SOLDIERS_SYRINGE;
+    let syringe2 = SOLDIERS_SYRINGE;
+    println!("{}", syringe1 == syringe2);
 }
