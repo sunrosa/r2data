@@ -8,6 +8,7 @@ use data::{ItemId::*, *};
 use model::*;
 
 fn main() {
+    // This takes fucking forever to type in. Please disinfect me.
     let run1 = Run {
         timestamp: chrono::Utc
             .with_ymd_and_hms(2023, 11, 18, 6, 31, 18)
