@@ -28,7 +28,7 @@ pub struct Run {
     /// The stages encountered, in order, during the run. Stages that don't increase the stage number, like Void Fields, are included here. However, the Bazaar is not included here.
     pub stages: Vec<EnvironmentId>,
     /// The time elapsed at the _end_ of each stage. Stages that don't increase the stage number, like Void Fields, are included here. However, the Bazaar is not included here.
-    pub clock_at_stage: Vec<std::time::Duration>,
+    pub clock_at_stage: Vec<chrono::Duration>,
     /// The enemy's scaling level at the _end_ of each stage. Stages that don't increase the stage number, like Void Fields, are included here. However, the Bazaar is not included here.
     pub scaling_at_stage: Vec<u32>,
 }
@@ -40,7 +40,7 @@ pub struct PlayerRun {
     pub player_name: String,
     // TODO: Determine whether this includes time during which only the team-mates are alive.
     /// Time spend alive during the run.
-    pub time_alive: std::time::Duration,
+    pub time_alive: chrono::Duration,
     /// Kills dealt by the player during the run.
     pub kills: u32,
     /// Kills dealt by minions during the run.
@@ -66,15 +66,17 @@ pub struct PlayerRun {
     pub stages_completed: u32,
     /// The number of items _bought_ during the run.
     pub purchases: u32,
-    /// The survivor (referred to as "Class" on the stats screen in-game) played for the run.
+    /// The survivor (referred to as "Class" on the stats screen in-game) played for the run and its loadout.
     pub survivor: SurvivorId,
+    /// The survivor's loadout the player used during the run.
+    pub loadout: Option<SurvivorLoadout>,
     // TODO: Verify the claim below.
     /// The monster that the player was killed by when the run (or their final life) ended.
     pub killed_by: MonsterId,
     /// The number of items held by the player at the end of each stage, and the number of each item that the player had. Stages that don't increase the stage number, like Void Fields, are included here. However, the Bazaar is not included here.
     pub items: Vec<Vec<(ItemId, u32)>>,
     /// The equipment held by the player at the end of each stage. Stages that don't increase the stage number, like Void Fields, are included here. However, the Bazaar is not included here.
-    pub equipment: Vec<ItemId>,
+    pub equipment: Vec<Option<ItemId>>,
     /// The result of the run, including victory, fate unknown, or defeat.
     pub outcome: OutcomeId,
 }
