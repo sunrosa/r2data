@@ -20,6 +20,318 @@ pub enum SurvivorId {
 }
 
 #[derive(Debug)]
+pub enum SurvivorLoadout {
+    Commando(CommandoLoadout),
+    Huntress(HuntressLoadout),
+    Bandit(BanditLoadout),
+    MulT(MulTLoadout),
+    Engineer(EngineerLoadout),
+    Artificer(ArtificerLoadout),
+    Mercenary(MercenaryLoadout),
+    Rex(RexLoadout),
+    Loader(LoaderLoadout),
+    Acrid(AcridLoadout),
+    Captain(CaptainLoadout),
+    Railgunner(RailgunnerLoadout),
+    VoidFiend(VoidFiendLoadout),
+}
+
+#[derive(Debug)]
+pub struct CommandoLoadout {
+    pub secondary: CommandoSecondaryId,
+    pub utility: CommandoUtilityId,
+    pub special: CommandoSpecialId,
+}
+
+#[derive(Debug)]
+pub enum CommandoSecondaryId {
+    PhaseRound,
+    PhaseBlast,
+}
+
+#[derive(Debug)]
+pub enum CommandoUtilityId {
+    TacticalDive,
+    TacticalSlide,
+}
+
+#[derive(Debug)]
+pub enum CommandoSpecialId {
+    SuppressiveFire,
+    FragGrenade,
+}
+
+#[derive(Debug)]
+pub struct HuntressLoadout {
+    pub primary: HuntressPrimaryId,
+    pub utility: HuntressUtilityId,
+    pub special: HuntressSpecialId,
+}
+
+#[derive(Debug)]
+pub enum HuntressPrimaryId {
+    Strafe,
+    Flurry,
+}
+
+#[derive(Debug)]
+pub enum HuntressUtilityId {
+    Blink,
+    PhaseBlink,
+}
+
+#[derive(Debug)]
+pub enum HuntressSpecialId {
+    ArrowRain,
+    Ballista,
+}
+
+#[derive(Debug)]
+pub struct BanditLoadout {
+    primary: BanditPrimaryId,
+    secondary: BanditSecondaryId,
+    special: BanditSpecialId,
+}
+
+#[derive(Debug)]
+pub enum BanditPrimaryId {
+    Burst,
+    Blast,
+}
+
+#[derive(Debug)]
+pub enum BanditSecondaryId {
+    SerratedDagger,
+    SerratedShiv,
+}
+
+#[derive(Debug)]
+pub enum BanditSpecialId {
+    LightsOut,
+    Desperado,
+}
+
+#[derive(Debug)]
+pub struct MulTLoadout {
+    primary1: MulTPrimaryId,
+    primary2: MulTPrimaryId,
+    special: MulTSpecialId,
+}
+
+#[derive(Debug)]
+pub enum MulTPrimaryId {
+    AutoNailgun,
+    RebarPuncher,
+    ScrapLauncher,
+    PowerSaw,
+}
+
+#[derive(Debug)]
+pub enum MulTSpecialId {
+    Retool,
+    PowerMode,
+}
+
+#[derive(Debug)]
+pub struct EngineerLoadout {
+    secondary: EngineerSecondaryId,
+    utility: EngineerUtilityId,
+    special: EngineerSpecialId,
+}
+
+#[derive(Debug)]
+pub enum EngineerSecondaryId {
+    PressureMines,
+    SpiderMines,
+}
+
+#[derive(Debug)]
+pub enum EngineerUtilityId {
+    BubbleShield,
+    ThermalHarpoons,
+}
+
+#[derive(Debug)]
+pub enum EngineerSpecialId {
+    TR12GaussAutoTurret,
+    TR58CarbonizerTurret,
+}
+
+#[derive(Debug)]
+pub struct ArtificerLoadout {
+    primary: ArtificerPrimaryId,
+    secondary: ArtificerSecondaryId,
+    special: ArtificerSpecialId,
+}
+
+#[derive(Debug)]
+pub enum ArtificerPrimaryId {
+    FlameBolt,
+    PlasmaBolt,
+}
+
+#[derive(Debug)]
+pub enum ArtificerSecondaryId {
+    ChargedNanoBomb,
+    CastNanoSpear,
+}
+
+#[derive(Debug)]
+pub enum ArtificerSpecialId {
+    Flamethrower,
+    IonSurge,
+}
+
+#[derive(Debug)]
+pub struct MercenaryLoadout {
+    secondary: MercenarySecondaryId,
+    utility: MercenaryUtilityId,
+    special: MercenarySpecialId,
+}
+
+#[derive(Debug)]
+pub enum MercenarySecondaryId {
+    Whirlwind,
+    RisingThunder,
+}
+
+#[derive(Debug)]
+pub enum MercenaryUtilityId {
+    BlindingAssault,
+    FocusedAssault,
+}
+
+#[derive(Debug)]
+pub enum MercenarySpecialId {
+    Eviscerate,
+    SlicingWinds,
+}
+
+#[derive(Debug)]
+pub struct RexLoadout {
+    secondary: RexSecondaryId,
+    utility: RexUtilityId,
+    special: RexSpecialId,
+}
+
+#[derive(Debug)]
+pub enum RexSecondaryId {
+    DirectiveDrill,
+    SeedBarrage,
+}
+
+#[derive(Debug)]
+pub enum RexUtilityId {
+    DirectiveDisperse,
+    BrambleVolley,
+}
+
+#[derive(Debug)]
+pub enum RexSpecialId {
+    DirectiveHarvest,
+    TanglingGrowth,
+}
+
+#[derive(Debug)]
+pub struct LoaderLoadout {
+    secondary: LoaderSecondaryId,
+    utility: LoaderUtilityId,
+    special: LoaderSpecialId,
+}
+
+#[derive(Debug)]
+pub enum LoaderSecondaryId {
+    GrappleFist,
+    SpikedFist,
+}
+
+#[derive(Debug)]
+pub enum LoaderUtilityId {
+    ChargedGauntlet,
+    ThunderGauntlet,
+}
+
+#[derive(Debug)]
+pub enum LoaderSpecialId {
+    M551Pylon,
+    Thunderslam,
+}
+
+#[derive(Debug)]
+pub struct AcridLoadout {
+    misc: AcridMiscId,
+    secondary: AcridSecondaryId,
+    utility: AcridUtilityId,
+}
+
+#[derive(Debug)]
+pub enum AcridMiscId {
+    Poison,
+    Blight,
+}
+
+#[derive(Debug)]
+pub enum AcridSecondaryId {
+    Neurotoxin,
+    RavenousBite,
+}
+
+#[derive(Debug)]
+pub enum AcridUtilityId {
+    CausticLeap,
+    FrenziedLeap,
+}
+
+#[derive(Debug)]
+pub struct CaptainLoadout {
+    utility: CaptainUtilityId,
+    special1: CaptainSpecialId,
+    special2: CaptainSpecialId,
+}
+
+#[derive(Debug)]
+pub enum CaptainUtilityId {
+    OrbitalProbe,
+    OGM72DiabloStrike,
+}
+
+#[derive(Debug)]
+pub enum CaptainSpecialId {
+    BeaconHealing,
+    BeaconShocking,
+    BeaconResupply,
+    BeaconHacking,
+}
+
+#[derive(Debug)]
+pub struct RailgunnerLoadout {
+    secondary: RailgunnerSecondaryId,
+    utility: RailgunnerUtilityId,
+    special: RailgunnerSpecialId,
+}
+
+#[derive(Debug)]
+pub enum RailgunnerSecondaryId {
+    M99Sniper,
+    HH44Marksman,
+}
+
+#[derive(Debug)]
+pub enum RailgunnerUtilityId {
+    ConcussionDevice,
+    PolarFieldDevice,
+}
+
+#[derive(Debug)]
+pub enum RailgunnerSpecialId {
+    Supercharge,
+    Cryocharge,
+}
+
+#[derive(Debug)]
+pub struct VoidFiendLoadout {}
+
+#[derive(Debug)]
 pub enum MonsterId {
     AlloyVulture,
     AlphaConstruct,
@@ -102,6 +414,8 @@ pub enum RarityId {
     Purple,
     /// Equipment
     Orange,
+    /// Things like Delicate Watch (Broken) and Empty Bottle
+    Untiered,
 }
 
 #[derive(Debug)]
@@ -289,6 +603,8 @@ pub enum ItemId {
     SpectralCirclet,
     SharedDesign,
     FuelArray,
+    DelicateWatchBroken,
+    EmptyBottle,
 }
 
 impl From<ItemId> for Item {
@@ -312,6 +628,7 @@ impl From<ItemId> for Item {
                 rarity: White,
                 category: vec![Healing, OnKillEffect],
             },
+            _ => todo!(),
         }
     }
 }
