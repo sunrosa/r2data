@@ -4,4 +4,6 @@ mod model;
 use data::*;
 use model::*;
 
-fn main() {}
+fn main() {
+    println!("{:?}", Item::new(ItemId::SoldiersSyringe))
+}

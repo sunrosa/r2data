@@ -24,6 +24,7 @@ pub enum Category {
     Damage,
     Healing,
     Utility,
+    BrotherBlacklist,
 }
 
 #[derive(Debug, PartialEq, Eq)]
@@ -32,16 +33,21 @@ pub enum ItemId {
     TougherTimes,
 }
 
-pub const SOLDIERS_SYRINGE: Item = Item {
-    id: SoldiersSyringe,
-    name: "Soldier's Syringe",
-    rarity: White,
-    category: Damage,
-};
-
-pub const TOUGHER_TIMES: Item = Item {
-    id: TougherTimes,
-    name: "Tougher Times",
-    rarity: White,
-    category: Damage,
-};
+impl Item {
+    pub fn new(id: ItemId) -> Self {
+        match id {
+            SoldiersSyringe => Item {
+                id: SoldiersSyringe,
+                name: "Soldier's Syringe".into(),
+                rarity: White,
+                category: vec![Damage],
+            },
+            TougherTimes => Item {
+                id: TougherTimes,
+                name: "Tougher Times".into(),
+                rarity: White,
+                category: vec![Damage, BrotherBlacklist],
+            },
+        }
+    }
+}
