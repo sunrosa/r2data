@@ -5,7 +5,7 @@ pub struct Item<'a> {
     pub id: ItemId,
     pub name: &'a str,
     pub rarity: Rarity,
-    pub category: Category,
+    pub category: &'a [Category],
 }
 
 impl PartialEq<Item<'_>> for Item<'_> {

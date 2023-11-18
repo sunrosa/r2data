@@ -24,6 +24,7 @@ pub enum Category {
     Damage,
     Healing,
     Utility,
+    BrotherBlacklist,
 }
 
 #[derive(Debug, PartialEq, Eq)]
@@ -36,12 +37,12 @@ pub const SOLDIERS_SYRINGE: Item = Item {
     id: SoldiersSyringe,
     name: "Soldier's Syringe",
     rarity: White,
-    category: Damage,
+    category: &[Damage],
 };
 
 pub const TOUGHER_TIMES: Item = Item {
     id: TougherTimes,
     name: "Tougher Times",
     rarity: White,
-    category: Damage,
+    category: &[Utility, BrotherBlacklist],
 };
