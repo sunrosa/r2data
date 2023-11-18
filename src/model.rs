@@ -1,3 +1,5 @@
+use crate::data::*;
+
 #[derive(Debug)]
 pub struct Item<'a> {
     pub id: ItemId,
@@ -13,33 +15,3 @@ impl PartialEq<Item<'_>> for Item<'_> {
 }
 
 impl Eq for Item<'_> {}
-
-#[derive(Debug)]
-pub enum Rarity {
-    /// Common
-    White,
-    /// Uncommon
-    Green,
-    /// Legendary
-    Red,
-    /// Boss
-    Yellow,
-    /// Lunar
-    Blue,
-    /// Void
-    Purple,
-    /// Equipment
-    Orange,
-}
-
-#[derive(Debug)]
-pub enum Category {
-    Damage,
-    Healing,
-    Utility,
-}
-
-#[derive(Debug, PartialEq, Eq)]
-pub enum ItemId {
-    SoldiersSyringe,
-}
