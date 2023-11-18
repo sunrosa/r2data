@@ -5,5 +5,6 @@ use data::*;
 use model::*;
 
 fn main() {
-    println!("{:?}", Item::new(ItemId::SoldiersSyringe))
+    let syringe = Item::from(ItemId::SoldiersSyringe);
+    let tougher_times = Item::from(ItemId::TougherTimes);
 }

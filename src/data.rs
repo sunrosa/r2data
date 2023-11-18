@@ -25,16 +25,18 @@ pub enum Category {
     Healing,
     Utility,
     BrotherBlacklist,
+    OnKillEffect,
 }
 
 #[derive(Debug, PartialEq, Eq)]
 pub enum ItemId {
     SoldiersSyringe,
     TougherTimes,
+    MonsterTooth,
 }
 
-impl Item {
-    pub fn new(id: ItemId) -> Self {
+impl From<ItemId> for Item {
+    fn from(id: ItemId) -> Self {
         match id {
             SoldiersSyringe => Item {
                 id: SoldiersSyringe,
@@ -47,6 +49,12 @@ impl Item {
                 name: "Tougher Times".into(),
                 rarity: White,
                 category: vec![Damage, BrotherBlacklist],
+            },
+            MonsterTooth => Item {
+                id: MonsterTooth,
+                name: "Monster Tooth".into(),
+                rarity: White,
+                category: vec![Healing, OnKillEffect],
             },
         }
     }
