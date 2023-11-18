@@ -38,13 +38,13 @@ lazy_static::lazy_static! {
         id: SoldiersSyringe,
         name: "Soldier's Syringe".into(),
         rarity: White,
-        category: Damage,
+        category: vec![Damage],
     };
 
     pub static ref TOUGHER_TIMES: Item = Item {
         id: TougherTimes,
         name: "Tougher Times".into(),
         rarity: White,
-        category: Utility,
+        category: vec![Utility, BrotherBlacklist],
     };
 }
