@@ -78,13 +78,13 @@ pub struct PlayerRun {
 #[derive(Debug)]
 pub struct StageStats {
     /// Which stage these stats refer to during a run.
-    pub stage: EnvironmentId,
-    /// The time elapsed at the _end_ of the stage. None if unknown.
+    pub environment: EnvironmentId,
+    /// The time elapsed at the _end_ of the stage. None if unknown, or if stage incomplete.
     pub clock_at_end: Option<chrono::Duration>,
-    /// The enemy's scaling level at the _end_ of the stage. None if unknown.
+    /// The enemy's scaling level at the _end_ of the stage. None if unknown, or if stage incomplete.
     pub scaling_at_end: Option<u32>,
-    /// The number of mountain shrines hit during the stage. None if unknown.
-    pub mountain_shrines_hit: Option<u32>,
+    /// The number of mountain shrines hit during the stage. None if unknown, or if stage incomplete.
+    pub mountain_shrines_at_end: Option<u32>,
 }
 
 #[derive(Debug)]
