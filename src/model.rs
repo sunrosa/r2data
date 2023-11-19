@@ -78,7 +78,7 @@ pub struct PlayerRun {
 #[derive(Debug)]
 pub struct StageStats {
     /// Which stage these stats refer to during a run.
-    pub stage_id: EnvironmentId,
+    pub stage: EnvironmentId,
     /// The time elapsed at the _end_ of the stage. None if unknown.
     pub clock_at_end: Option<chrono::Duration>,
     /// The enemy's scaling level at the _end_ of the stage. None if unknown.
