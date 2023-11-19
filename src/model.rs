@@ -79,11 +79,11 @@ pub struct PlayerRun {
 pub struct StageStats {
     /// Which stage these stats refer to during a run.
     pub stage_id: EnvironmentId,
-    /// The time elapsed at the _end_ of the stage.
+    /// The time elapsed at the _end_ of the stage. None if unknown.
     pub clock_at_end: Option<chrono::Duration>,
-    /// The enemy's scaling level at the _end_ of the stage.
+    /// The enemy's scaling level at the _end_ of the stage. None if unknown.
     pub scaling_at_end: Option<u32>,
-    /// The number of mountain shrines hit during the stage.
+    /// The number of mountain shrines hit during the stage. None if unknown.
     pub mountain_shrines_hit: Option<u32>,
 }
 
@@ -91,8 +91,8 @@ pub struct StageStats {
 pub struct PlayerStageStats {
     /// The items the player were carrying at the _end_ of the particular stage.
     pub items: Vec<(ItemId, u32)>,
-    /// The equipment the player was carrying at the _end_ of the particular stage.
-    pub equipment: Option<ItemId>,
+    /// The equipment the player was carrying at the _end_ of the particular stage. Inner None if no equipment held. Outer None if unknown.
+    pub equipment: Option<Option<ItemId>>,
     /// Whether or not the player died during the particular stage.
     pub died: bool,
 }

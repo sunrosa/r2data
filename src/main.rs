@@ -54,7 +54,7 @@ fn main() {
                                 (Gasoline, 1),
                                 (OldGuillotine, 1),
                             ],
-                            equipment: Some(VolcanicEgg),
+                            equipment: Some(VolcanicEgg).into(),
                             died: false,
                         },
                         PlayerStageStats {
@@ -74,7 +74,7 @@ fn main() {
                                 (Ukulele, 1),
                                 (SoulboundCatalyst, 1),
                             ],
-                            equipment: Some(VolcanicEgg),
+                            equipment: Some(VolcanicEgg).into(),
                             died: false,
                         },
                         PlayerStageStats {
@@ -100,7 +100,7 @@ fn main() {
                                 (ItemScrapGreen, 4),
                                 (ItemScrapWhite, 6),
                             ],
-                            equipment: Some(EccentricVase),
+                            equipment: Some(EccentricVase).into(),
                             died: false,
                         },
                         PlayerStageStats {
@@ -129,7 +129,7 @@ fn main() {
                                 (PredatoryInstincts, 1),
                                 (DeathMark, 1),
                             ],
-                            equipment: Some(DisposableMissileLauncher),
+                            equipment: Some(DisposableMissileLauncher).into(),
                             died: false,
                         },
                         PlayerStageStats {
@@ -168,7 +168,7 @@ fn main() {
                                 (Bandolier, 1),
                                 (DelicateWatchBroken, 3),
                             ],
-                            equipment: Some(DisposableMissileLauncher),
+                            equipment: Some(DisposableMissileLauncher).into(),
                             died: true,
                         },
                     ],
@@ -203,7 +203,7 @@ fn main() {
                                 (Medkit, 1),
                                 (OldGuillotine, 1),
                             ],
-                            equipment: Some(TrophyHuntersTricorn),
+                            equipment: Some(TrophyHuntersTricorn).into(),
                             died: false,
                         },
                         PlayerStageStats {
@@ -219,7 +219,7 @@ fn main() {
                                 (KjarosBand, 1),
                                 (RunaldsBand, 1),
                             ],
-                            equipment: Some(TrophyHuntersTricorn),
+                            equipment: Some(TrophyHuntersTricorn).into(),
                             died: false,
                         },
                         PlayerStageStats {
@@ -240,7 +240,7 @@ fn main() {
                                 (Mocha, 1),
                                 (ItemScrapGreen, 2),
                             ],
-                            equipment: Some(TrophyHuntersTricorn),
+                            equipment: Some(TrophyHuntersTricorn).into(),
                             died: false,
                         },
                         PlayerStageStats {
@@ -266,7 +266,7 @@ fn main() {
                                 (RoseBuckler, 3),
                                 (TriTipDagger, 5),
                             ],
-                            equipment: Some(EccentricVase),
+                            equipment: Some(EccentricVase).into(),
                             died: false,
                         },
                         PlayerStageStats {
@@ -300,7 +300,7 @@ fn main() {
                                 (WillOTheWisp, 1),
                                 (EmpathyCores, 1),
                             ],
-                            equipment: Some(EccentricVase),
+                            equipment: Some(EccentricVase).into(),
                             died: true,
                         },
                     ],
@@ -381,7 +381,7 @@ fn main() {
                                 (QueensGland, 1),
                                 (Gasoline, 1),
                             ],
-                            equipment: EccentricVase.into(),
+                            equipment: Some(EccentricVase).into(),
                             died: false,
                         },
                         PlayerStageStats {
@@ -399,7 +399,7 @@ fn main() {
                                 (DelicateWatch, 1),
                                 (ItemScrapWhite, 1),
                             ],
-                            equipment: EccentricVase.into(),
+                            equipment: Some(EccentricVase).into(),
                             died: false,
                         },
                         PlayerStageStats {
@@ -424,7 +424,7 @@ fn main() {
                                 (DelicateWatch, 1),
                                 (PowerElixir, 1),
                             ],
-                            equipment: EccentricVase.into(),
+                            equipment: Some(EccentricVase).into(),
                             died: false,
                         },
                         PlayerStageStats {
@@ -450,7 +450,7 @@ fn main() {
                                 (RustedKey, 1),
                                 (WakeOfVultures, 1),
                             ],
-                            equipment: EccentricVase.into(),
+                            equipment: Some(EccentricVase).into(),
                             died: false,
                         },
                         PlayerStageStats {
@@ -489,7 +489,7 @@ fn main() {
                                 (Infusion, 1),
                                 (WarHorn, 2),
                             ],
-                            equipment: EccentricVase.into(),
+                            equipment: Some(EccentricVase).into(),
                             died: false,
                         },
                         PlayerStageStats {
@@ -527,7 +527,7 @@ fn main() {
                                 (WarHorn, 2),
                                 (AlienHead, 1),
                             ],
-                            equipment: EccentricVase.into(),
+                            equipment: Some(EccentricVase).into(),
                             died: true,
                         },
                     ],
@@ -562,7 +562,7 @@ fn main() {
                                 (Infusion, 2),
                                 (StickyBomb, 1),
                             ],
-                            equipment: RadarScanner.into(),
+                            equipment: Some(RadarScanner).into(),
                             died: false,
                         },
                         PlayerStageStats {
@@ -581,7 +581,7 @@ fn main() {
                                 (BundleOfFireworks, 1),
                                 (Bandolier, 1),
                             ],
-                            equipment: RadarScanner.into(),
+                            equipment: Some(RadarScanner).into(),
                             died: false,
                         },
                         PlayerStageStats {
@@ -600,7 +600,7 @@ fn main() {
                                 (ItemScrapWhite, 6),
                                 (ItemScrapGreen, 8),
                             ],
-                            equipment: None,
+                            equipment: Some(None),
                             died: false,
                         },
                         PlayerStageStats {
@@ -622,7 +622,7 @@ fn main() {
                                 (WakeOfVultures, 1),
                                 (Chronobauble, 1),
                             ],
-                            equipment: DisposableMissileLauncher.into(),
+                            equipment: Some(DisposableMissileLauncher).into(),
                             died: false,
                         },
                         PlayerStageStats {
@@ -644,7 +644,7 @@ fn main() {
                                 (WakeOfVultures, 1),
                                 (Chronobauble, 1),
                             ],
-                            equipment: DisposableMissileLauncher.into(),
+                            equipment: Some(DisposableMissileLauncher).into(),
                             died: true,
                         },
                         PlayerStageStats {
@@ -665,7 +665,7 @@ fn main() {
                                 (RegeneratingScrapConsumed, 1),
                                 (AlienHead, 1),
                             ],
-                            equipment: DisposableMissileLauncher.into(),
+                            equipment: Some(DisposableMissileLauncher).into(),
                             died: true,
                         },
                     ],
@@ -700,6 +700,12 @@ fn main() {
                     stage_id: EnvironmentId::SkyMeadow,
                     clock_at_end: mins_secs(64, 10).into(),
                     scaling_at_end: 63.into(),
+                    mountain_shrines_hit: 0.into(),
+                },
+                StageStats {
+                    stage_id: EnvironmentId::Commencement,
+                    clock_at_end: None,
+                    scaling_at_end: None,
                     mountain_shrines_hit: 0.into(),
                 },
             ],
