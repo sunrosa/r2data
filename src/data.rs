@@ -1,7 +1,7 @@
 use crate::model::*;
 use {CategoryId::*, ItemId::*, RarityId::*};
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum SurvivorId {
     Commando,
     Huntress,
@@ -19,7 +19,7 @@ pub enum SurvivorId {
     Heretic,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum SurvivorLoadout {
     Commando(CommandoLoadout),
     Huntress(HuntressLoadout),
@@ -36,89 +36,89 @@ pub enum SurvivorLoadout {
     VoidFiend(VoidFiendLoadout),
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub struct CommandoLoadout {
     pub secondary: CommandoSecondaryId,
     pub utility: CommandoUtilityId,
     pub special: CommandoSpecialId,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum CommandoSecondaryId {
     PhaseRound,
     PhaseBlast,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum CommandoUtilityId {
     TacticalDive,
     TacticalSlide,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum CommandoSpecialId {
     SuppressiveFire,
     FragGrenade,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub struct HuntressLoadout {
     pub primary: HuntressPrimaryId,
     pub utility: HuntressUtilityId,
     pub special: HuntressSpecialId,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum HuntressPrimaryId {
     Strafe,
     Flurry,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum HuntressUtilityId {
     Blink,
     PhaseBlink,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum HuntressSpecialId {
     ArrowRain,
     Ballista,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub struct BanditLoadout {
     pub primary: BanditPrimaryId,
     pub secondary: BanditSecondaryId,
     pub special: BanditSpecialId,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum BanditPrimaryId {
     Burst,
     Blast,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum BanditSecondaryId {
     SerratedDagger,
     SerratedShiv,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum BanditSpecialId {
     LightsOut,
     Desperado,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub struct MulTLoadout {
     pub primary1: MulTPrimaryId,
     pub primary2: MulTPrimaryId,
     pub special: MulTSpecialId,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum MulTPrimaryId {
     AutoNailgun,
     RebarPuncher,
@@ -126,176 +126,176 @@ pub enum MulTPrimaryId {
     PowerSaw,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum MulTSpecialId {
     Retool,
     PowerMode,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub struct EngineerLoadout {
     pub secondary: EngineerSecondaryId,
     pub utility: EngineerUtilityId,
     pub special: EngineerSpecialId,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum EngineerSecondaryId {
     PressureMines,
     SpiderMines,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum EngineerUtilityId {
     BubbleShield,
     ThermalHarpoons,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum EngineerSpecialId {
     TR12GaussAutoTurret,
     TR58CarbonizerTurret,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub struct ArtificerLoadout {
     pub primary: ArtificerPrimaryId,
     pub secondary: ArtificerSecondaryId,
     pub special: ArtificerSpecialId,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum ArtificerPrimaryId {
     FlameBolt,
     PlasmaBolt,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum ArtificerSecondaryId {
     ChargedNanoBomb,
     CastNanoSpear,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum ArtificerSpecialId {
     Flamethrower,
     IonSurge,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub struct MercenaryLoadout {
     pub secondary: MercenarySecondaryId,
     pub utility: MercenaryUtilityId,
     pub special: MercenarySpecialId,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum MercenarySecondaryId {
     Whirlwind,
     RisingThunder,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum MercenaryUtilityId {
     BlindingAssault,
     FocusedAssault,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum MercenarySpecialId {
     Eviscerate,
     SlicingWinds,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub struct RexLoadout {
     pub secondary: RexSecondaryId,
     pub utility: RexUtilityId,
     pub special: RexSpecialId,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum RexSecondaryId {
     DirectiveDrill,
     SeedBarrage,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum RexUtilityId {
     DirectiveDisperse,
     BrambleVolley,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum RexSpecialId {
     DirectiveHarvest,
     TanglingGrowth,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub struct LoaderLoadout {
     pub secondary: LoaderSecondaryId,
     pub utility: LoaderUtilityId,
     pub special: LoaderSpecialId,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum LoaderSecondaryId {
     GrappleFist,
     SpikedFist,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum LoaderUtilityId {
     ChargedGauntlet,
     ThunderGauntlet,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum LoaderSpecialId {
     M551Pylon,
     Thunderslam,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub struct AcridLoadout {
     pub misc: AcridMiscId,
     pub secondary: AcridSecondaryId,
     pub utility: AcridUtilityId,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum AcridMiscId {
     Poison,
     Blight,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum AcridSecondaryId {
     Neurotoxin,
     RavenousBite,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum AcridUtilityId {
     CausticLeap,
     FrenziedLeap,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub struct CaptainLoadout {
     pub utility: CaptainUtilityId,
     pub special1: CaptainSpecialId,
     pub special2: CaptainSpecialId,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum CaptainUtilityId {
     OrbitalProbe,
     OGM72DiabloStrike,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum CaptainSpecialId {
     BeaconHealing,
     BeaconShocking,
@@ -303,35 +303,35 @@ pub enum CaptainSpecialId {
     BeaconHacking,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub struct RailgunnerLoadout {
     pub secondary: RailgunnerSecondaryId,
     pub utility: RailgunnerUtilityId,
     pub special: RailgunnerSpecialId,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum RailgunnerSecondaryId {
     M99Sniper,
     HH44Marksman,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum RailgunnerUtilityId {
     ConcussionDevice,
     PolarFieldDevice,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum RailgunnerSpecialId {
     Supercharge,
     Cryocharge,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub struct VoidFiendLoadout {}
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum MonsterId {
     AlloyVulture,
     AlphaConstruct,
@@ -398,7 +398,7 @@ pub enum MonsterId {
     VoidReaverAlly,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum RarityId {
     /// Common
     White,
@@ -418,7 +418,7 @@ pub enum RarityId {
     Untiered,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum CategoryId {
     Damage,
     Healing,
@@ -634,14 +634,14 @@ impl From<ItemId> for Item {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum OutcomeId {
     Defeat,
     FateUnknown,
     Victory,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum DifficultyId {
     Drizzle,
     Rainstorm,
@@ -656,7 +656,7 @@ pub enum DifficultyId {
     Eclipse8,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum EnvironmentId {
     DistantRoost,
     TitanicPlains,
