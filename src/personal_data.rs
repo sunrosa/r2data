@@ -7,7 +7,7 @@ fn mins_secs(minutes: i64, seconds: i64) -> Duration {
     Duration::minutes(minutes) + Duration::seconds(seconds)
 }
 
-const sunrosa_huntress_loadout: SurvivorLoadout = SurvivorLoadout::Huntress(HuntressLoadout {
+const SUNROSA_HUNTRESS_LOADOUT: SurvivorLoadout = SurvivorLoadout::Huntress(HuntressLoadout {
     primary: HuntressPrimaryId::Strafe,
     utility: HuntressUtilityId::PhaseBlink,
     special: HuntressSpecialId::Ballista,
@@ -786,7 +786,7 @@ pub fn personal_runs() -> Vec<Run> {
                 stages_completed: 0,
                 purchases: 2,
                 survivor: SurvivorId::Huntress,
-                loadout: sunrosa_huntress_loadout.into(),
+                loadout: SUNROSA_HUNTRESS_LOADOUT.into(),
                 killed_by: MonsterId::BlindPest,
                 outcome: OutcomeId::Defeat,
                 stages: vec![PlayerStageStats {
@@ -967,7 +967,7 @@ pub fn personal_runs() -> Vec<Run> {
                 stages_completed: 0,
                 purchases: 13,
                 survivor: SurvivorId::Huntress,
-                loadout: sunrosa_huntress_loadout.into(),
+                loadout: SUNROSA_HUNTRESS_LOADOUT.into(),
                 killed_by: MonsterId::LesserWisp,
                 outcome: OutcomeId::Defeat,
                 stages: vec![PlayerStageStats {
@@ -1007,7 +1007,7 @@ pub fn personal_runs() -> Vec<Run> {
                 stages_completed: 2,
                 purchases: 46,
                 survivor: SurvivorId::Huntress,
-                loadout: sunrosa_huntress_loadout.into(),
+                loadout: SUNROSA_HUNTRESS_LOADOUT.into(),
                 killed_by: MonsterId::BighornBison,
                 outcome: OutcomeId::Defeat,
                 stages: {
@@ -1094,7 +1094,7 @@ pub fn personal_runs() -> Vec<Run> {
                 },
             ],
         },
-        // This run (below) was cope as fuck. I almost had it though.
+        // This run (below) was cope as fuck. I almost had it though. Epic throw.
         Run {
             timestamp: Utc.with_ymd_and_hms(2023, 11, 19, 10, 39, 5).unwrap(),
             difficulty: DifficultyId::Eclipse7,
@@ -1114,7 +1114,7 @@ pub fn personal_runs() -> Vec<Run> {
                 stages_completed: 4,
                 purchases: 85,
                 survivor: SurvivorId::Huntress,
-                loadout: sunrosa_huntress_loadout.into(),
+                loadout: SUNROSA_HUNTRESS_LOADOUT.into(),
                 killed_by: MonsterId::ElderLemurian,
                 outcome: OutcomeId::Defeat,
                 stages: vec![
