@@ -25,12 +25,8 @@ pub struct Run {
     pub difficulty: DifficultyId,
     /// The stats of the players who played in the run.
     pub players: Vec<PlayerRun>,
-    /// The stages encountered, in order, during the run. Stages that don't increase the stage number, like Void Fields, are included here. However, the Bazaar is not included here.
-    pub stages: Vec<EnvironmentId>,
-    /// The time elapsed at the _end_ of each stage. Stages that don't increase the stage number, like Void Fields, are included here. However, the Bazaar is not included here.
-    pub clock_at_stage: Vec<chrono::Duration>,
-    /// The enemy's scaling level at the _end_ of each stage. Stages that don't increase the stage number, like Void Fields, are included here. However, the Bazaar is not included here.
-    pub scaling_at_stage: Vec<u32>,
+    /// The statistics of the stages encountered during the run. Stages containing items and enemies, that don't increase the stage number, like Void Fields and the Gilded Coast, are included here. However, the Bazaar in particular is not included here.
+    pub stages: Vec<StageStats>,
 }
 
 /// The stats for a single run _specific to a single player_. There will be multiple of these for a multiplayer run.
@@ -73,10 +69,30 @@ pub struct PlayerRun {
     // TODO: Verify the claim below.
     /// The monster that the player was killed by when the run (or their final life) ended.
     pub killed_by: MonsterId,
-    /// The number of items held by the player at the end of each stage, and the number of each item that the player had. Stages that don't increase the stage number, like Void Fields, are included here. However, the Bazaar is not included here.
-    pub items: Vec<Vec<(ItemId, u32)>>,
-    /// The equipment held by the player at the end of each stage. Stages that don't increase the stage number, like Void Fields, are included here. However, the Bazaar is not included here.
-    pub equipment: Vec<Option<ItemId>>,
     /// The result of the run, including victory, fate unknown, or defeat.
     pub outcome: OutcomeId,
+    /// The statistics for the stages the player encountered, in order. This is to be synchronized with the stages as stored in [Run] information.
+    pub stages: Vec<PlayerStageStats>,
+}
+
+#[derive(Debug)]
+pub struct StageStats {
+    /// Which stage these stats refer to during a run.
+    pub stage_id: EnvironmentId,
+    /// The time elapsed at the _end_ of the stage.
+    pub clock_at_end: chrono::Duration,
+    /// The enemy's scaling level at the _end_ of the stage.
+    pub scaling_at_end: u32,
+    /// The number of mountain shrines hit during the stage.
+    pub mountain_shrines_hit: u32,
+}
+
+#[derive(Debug)]
+pub struct PlayerStageStats {
+    /// The items the player were carrying at the _end_ of the particular stage.
+    pub items: Vec<(ItemId, u32)>,
+    /// The equipment the player was carrying at the _end_ of the particular stage.
+    pub equipment: Option<ItemId>,
+    /// Whether or not the player died during the particular stage.
+    pub died: bool,
 }
