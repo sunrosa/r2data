@@ -1,8 +1,6 @@
 mod data;
 mod model;
 
-use std::env::Vars;
-
 use chrono::{Duration, TimeZone};
 use data::{ItemId::*, *};
 use model::*;
@@ -333,15 +331,15 @@ fn main() {
                 },
                 StageStats {
                     stage_id: EnvironmentId::SkyMeadow,
-                    clock_at_end: None.into(),
-                    scaling_at_end: None.into(),
-                    mountain_shrines_hit: None.into(),
+                    clock_at_end: None,
+                    scaling_at_end: None,
+                    mountain_shrines_hit: None,
                 },
             ],
         },
         Run {
             timestamp: chrono::Utc
-                .with_ymd_and_hms(2023, 11, 18, 08, 0, 44)
+                .with_ymd_and_hms(2023, 11, 18, 8, 0, 44)
                 .unwrap(),
             difficulty: DifficultyId::Eclipse1,
             players: vec![
@@ -712,7 +710,17 @@ fn main() {
         },
     ];
 
-    println!("{:?}", runs);
+    let latest_run = runs.last().unwrap();
+
+    let sunrosa_latest_run = latest_run
+        .players
+        .iter()
+        .find(|x| x.player_name == "sunrosa")
+        .unwrap();
+
+    let sunrosa_latest_loadout = sunrosa_latest_run.loadout.as_ref().unwrap();
+
+    println!("{:?}", sunrosa_latest_loadout);
 }
 
 // Second run items (incomplete)
