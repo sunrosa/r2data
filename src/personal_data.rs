@@ -1094,6 +1094,7 @@ pub fn personal_runs() -> Vec<Run> {
                 },
             ],
         },
+        // This run (below) was cope as fuck. I almost had it though.
         Run {
             timestamp: Utc.with_ymd_and_hms(2023, 11, 19, 10, 39, 5).unwrap(),
             difficulty: DifficultyId::Eclipse7,
