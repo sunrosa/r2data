@@ -606,6 +606,7 @@ pub enum ItemId {
     DelicateWatchBroken,
     EmptyBottle,
     DiosBestFriendConsumed,
+    RegeneratingScrapConsumed,
 }
 
 impl From<ItemId> for Item {
