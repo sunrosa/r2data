@@ -85,6 +85,8 @@ pub struct StageStats {
     pub scaling_at_end: Option<u32>,
     /// The number of mountain shrines hit during the stage. None if unknown, or if stage incomplete.
     pub mountain_shrines_at_end: Option<u32>,
+    /// Whether a blue orb (for the Bazaar) is present at the portal at the _end_ of the stage. This does not imply the player went through, though it is likely they did if it was present; sometimes a blue orb spawns on its own. None if unknown, or if the stage is incomplete.
+    pub blue_orb_present: Option<bool>,
 }
 
 #[derive(Debug)]
