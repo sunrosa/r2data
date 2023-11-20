@@ -1,7 +1,5 @@
 use data::OutcomeId;
 
-use crate::stats::run_count;
-
 mod data;
 mod model;
 mod personal_data;
@@ -9,6 +7,11 @@ mod stats;
 
 fn main() {
     let runs = personal_data::personal_runs();
+    let runs_ref: Vec<&model::Run> = runs.iter().collect();
 
-    println!("{:?}", run_count(&runs, &"Veryveryoriginalname".into()))
+    println!(
+        "{} / {}",
+        stats::player_wins(runs_ref.clone(), &"sunrosa".into()).len(),
+        stats::player_runs(runs_ref, &"sunrosa".into()).len()
+    )
 }
