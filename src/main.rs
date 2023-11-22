@@ -1,17 +1,15 @@
-use data::OutcomeId;
+use std::io::Write;
+
+use data::{ItemId, OutcomeId};
+
+use crate::example::stage_1_item_averages;
 
 mod data;
+mod example;
 mod model;
 mod personal_data;
-mod stats;
+mod stat;
 
 fn main() {
-    let runs = personal_data::personal_runs();
-    let runs_ref: Vec<&model::Run> = runs.iter().collect();
-
-    println!(
-        "{} / {}",
-        stats::player_wins(runs_ref.clone(), &"sunrosa".into()).len(),
-        stats::player_runs(runs_ref, &"sunrosa".into()).len()
-    )
+    println!("{}", stage_1_item_averages())
 }
